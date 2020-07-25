@@ -12,6 +12,20 @@ class PortfoliosController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @portfolio_item.update(portfolio_params)
+        format.html { redirect_to @portfolio_item, notice: 'Portfolio was successfully updated.' }
+        format.json { render :show, status: :ok, location: @portfolio_item }
+      else
+        format.html { render :edit }
+        format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
