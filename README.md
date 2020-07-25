@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+----
+https://daringfireball.net/projects/markdown/
+https://www.markdowntutorial.com/
